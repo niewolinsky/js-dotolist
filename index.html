@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="https://github.com/Niewolinsky">
+  <meta name="description" content="This is a to-do list.">
+  <meta property="og:image" content="https://i.imgur.com/uvLJn1m.png">
+  <meta property="og:description" content="This is a to-do list.">
+  <meta property="og:title" content="dotoList - The modern to-do list.">
+	<link rel="stylesheet" href="styles.css">
+  <script type="module" src="script.js" defer></script>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>dotoList - The modern to-do list.</title>
+</head>
+<body>
+  <div id="modalBackground">
+    <header id="header">
+      <div id="switchContainer" class="switch">
+        <input type="checkbox" id="darkMode">
+        <label for="darkMode">-------------</label>
+      </div>
+      <img src="pngs/mainLogo.png" alt="Main Logo" id="mainLogo">
+      <img src="svgs/user.svg" alt="User Logo" id="userLogin">
+    </header>
+
+    <div id="cardContainer">
+      <!-- GENERATED NOTES GO HERE -->
+    </div>
+  </div>
+  
+  <footer>
+    <button id="addButton"></button>
+  </footer>
+
+
+  <!-- HIDDEN POP-UP NEW NOTE MODAL -->
+  <div id="newNoteModal" class="modal card" style="display: none">
+    <img src="svgs/remove.svg" alt="Remove Logo" class="modalRemoveLogo filter-grey">
+    <img src="svgs/accept.svg" alt="Accept Logo" class="modalAcceptLogo filter-grey">
+
+    <form action="" class="modalCardContent" id="modalCardContent">
+      <input type="text" class="title" id="noteTitle" placeholder="Title...">
+      <textarea name="note" class="note" id="noteNote" placeholder="Note..." rows="5" cols="33"></textarea>
+    </form>
+
+    <div class="switchB">
+      <input type="radio" name="priority" id="low" value="filter-green" checked/>
+        <label for="low" class="switchB__label">•</label>
+      <input type="radio" name="priority" id="med" value="filter-orange"/>
+        <label for="med" class="switchB__label">•</label>
+      <input type="radio" name="priority" id="high" value="filter-red"/>
+        <label for="high" class="switchB__label">•</label>
+      
+      <div class="switchB__indicator"></div>
+    </div>
+  </div>
+
+  <div id="particles-js"></div>
+  <!-- SVG ICONS BY:
+    Icon made by 'Pixel perfect' from www.flaticon.com
+    Icon made by 'Vectors Market' from www.flaticon.com
+   -->
+</body>
+</html>
